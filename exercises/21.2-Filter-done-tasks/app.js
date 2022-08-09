@@ -9,4 +9,17 @@ let tasks = [
 	{ label: 'Make a trip', done: false }
 ];
 
+let doneTask = tasks.filter(function(value){
+	if( value.done === true) return value
+});
+console.log(doneTask);
 //your code here
+/*let theBools = [0,1,0,0,1,1,1,0,0,1,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1];
+
+let newArray = theBools.map(function(value){
+    if (value == 1) return "wiki";
+    else if (value == 0) return "woko";
+});
+
+console.log(newArray);
+*/

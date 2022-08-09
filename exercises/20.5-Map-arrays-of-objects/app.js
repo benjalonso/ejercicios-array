@@ -6,8 +6,31 @@ let people = [
 	{ name: 'Steve', birthDate: new Date(2003,4,24) }
 ];
 
+
 let simplifier = function(person){
-	return person.name;
+    function getEdad (fechaString) {
+        let today = new Date()
+        let age = today.getFullYear() - person.birthDate.getFullYear()
+        return age;
+    }
+    
+    
+	return " Hello, my name is "+person.name+" and I am "+ getEdad() +" years old.";
 };
 
 console.log(people.map(simplifier));
+
+
+
+
+
+
+
+
+/*let names = ['Alice','Bob','Marry','Joe','Hilary','Stevia','Dylan'];
+
+let prepender = function(name){
+	return 'My name is: '+name;
+};
+let newArray = names.map(prepender);
+console.log(newArray)*/
